@@ -1,3 +1,15 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+
+// Time:  O(n * logk), n is the length of the result list.
+// Space: O(1)
+
 class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
