@@ -1,3 +1,6 @@
+// Time complexity : O(nlgn)
+// Space complexity : O(1) (or O(n))
+
 class Solution {
     public int longestConsecutive(int[] nums) {
         if (nums.length == 0) {
