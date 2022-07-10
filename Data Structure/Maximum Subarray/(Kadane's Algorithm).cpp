@@ -1,3 +1,6 @@
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
 int maxSubArray(vector<int>& nums) {
         int n = nums.size();
         int currSum = nums[0];
