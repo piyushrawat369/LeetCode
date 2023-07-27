@@ -1,12 +1,16 @@
 class Solution {
-    public int repeatedStringMatch(String a, String b) {
-        final int n = (int) Math.ceil((double) b.length()/a.length());
-        final String s = String.join("", Collections.nCopies(n, a));
+public:
+    int repeatedStringMatch(string a, string b) {
+        const int n = ceil((double)b.length()/a.length());
+        string s = "";
 
-        if(s.contains(b))
+        for(int i=0; i<n; i++)
+            s += a;
+        
+        if(s.find(b) != string::npos)
             return n;
-        if((s+a).contains(b))
+        if((s+a).find(b) != string::npos)
             return n+1;
         return -1;
     }
-}
+};
