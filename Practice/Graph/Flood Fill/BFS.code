@@ -1,0 +1,18 @@
+vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int newColor) {
+        int oldColor = image[sr][sc];
+        if(oldColor == newColor) return image;
+        const vector<pair<int, int>> moves = {{0,-1}, {0,1}, {1,0}, {-1,0}};
+        queue<pair<int, int>> q({{sr, sc}});
+        while(q.size())
+        {
+            auto [row,col] = q.front(); q.pop();
+            image[row][col] = newColor;
+            for(auto& [R,C] : moves)
+            {
+                int r = row+R, c = col+C;
+                if(r < 0 || r >= image.size() || c < 0 || c >= image[0].size() || image[r][c] != oldColor) continue;
+                q.push({r,c});
+            }
+        }
+        return image;
+    }
