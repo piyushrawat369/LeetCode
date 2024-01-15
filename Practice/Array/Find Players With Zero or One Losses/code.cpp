@@ -27,9 +27,5 @@ public:
         sort(onceLost.begin(),onceLost.end());
 
         return {notLost,onceLost};
-
-
-
-        
     }
 };
